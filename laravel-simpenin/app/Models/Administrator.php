@@ -2,15 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 use App\Models\Akun;
 use App\Models\Imunisasi;
 
-class User extends Authenticatable
+class Administrator extends Model
 {
     use HasFactory;
 
@@ -28,17 +25,6 @@ class User extends Authenticatable
      */
     protected $akun = 'string';
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var string
-     */
-    protected $imunisasi = 'string';
-
-    public function getdaftar(){
-        return $this -> daftar;
-    }
-
     public function getmasuk(){
         return $this -> masuk;
     }
@@ -51,7 +37,7 @@ class User extends Authenticatable
         return $this -> Imunisasi;
     }
 
-    public function viewImunisasi(){
-        return $this -> viewakun;
+    public function setImunisasi(){
+        return $this -> Imunisasi;
     }
 }
