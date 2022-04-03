@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Login Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-light mb-3" style="background-color: #FFCCCC;">
+		<div class="navbar-header mx-auto">
+			<a class="navbar-brand mx-auto" href="Home.html">
+				<img src="./assets/logo.jpg" alt="logo" height="50px">
+				SISTEM PENDATAAN IMUNISASI
+			</a>
+		</div>
+	</nav>
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center">
+						<h4>LOGIN</h4>
+					</div>
+					<div class="text-center mb-4">
+						<h5>(Memasukan Akun Terdaftar)</h5>
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-4">
+							<h1 class="text-center fs-4 card-title fw-bold mb-4">TOLONG ISI KOLOM</h1>
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+								<div class="mb-3">
+									<label class="my-2 text-muted" for="name">ID AKUN</label>
+									<input id="name" type="text" class="form-control" name="idakun" value="" required
+										autofocus>
+									<div class="invalid-feedback">
+										ID Akun is required
+									</div>
+								<div class="my-3">
+									<label class="my-2 text-muted" for="password">SANDI</label>
+									<input id="password" type="password" class="form-control" name="sandi" required>
+									<div class="invalid-feedback">
+										Sandi is required
+									</div>
+								</div>
+                                <div class="text-end">
+									<p>LUPA ID AKUN?</p>
+								</div>
+                                <div class="d-flex align-items-center mb-5">
+									<button type="button" class="btn btn-secondary border border-secondary ms-auto">
+										LUPA ID
+									</button>
+								</div>
+								<div class="text-center">
+									<button type="button" class="btn btn-light border border-secondary ms-auto">
+										LOGIN
+									</button>
+								</div>
+							</form>
+						</div>
+	</section>
+
+	<script src="js/login.js"></script>
+</body>
+
+</html>
