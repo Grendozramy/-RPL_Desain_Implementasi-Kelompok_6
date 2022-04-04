@@ -7,51 +7,38 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Akun;
-use App\Models\Imunisasi;
 
 class User extends Authenticatable
 {
-    use HasFactory;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var string
+     * @var array<int, string>
      */
-    protected $id = 'string';
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var string
+     * @var array<int, string>
      */
-    protected $akun = 'string';
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
 
     /**
      * The attributes that should be cast.
      *
-     * @var string
+     * @var array<string, string>
      */
-    protected $imunisasi = 'string';
-
-    public function getdaftar(){
-        return $this -> daftar;
-    }
-
-    public function getmasuk(){
-        return $this -> masuk;
-    }
-
-    public function viewakun(){
-        return $this -> viewakun;
-    }
-
-    public function getImunisasi(){
-        return $this -> Imunisasi;
-    }
-
-    public function viewImunisasi(){
-        return $this -> viewakun;
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
