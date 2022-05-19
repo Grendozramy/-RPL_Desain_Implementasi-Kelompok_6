@@ -7,6 +7,6 @@ Anggota:
 - [Mansel Lorenzo Nugraha](https://github.com/mansel12) (1301190188)
 - [Muhammad Farhan Phalosa](https://github.com/farhanfhalosa) (1301194411)
 
-Laravel-simpenin
+Laravel-SIMPENIN
 
 https://github.com/Grendozramy/RPL_Desain_Implementasi-SIMPENIN
